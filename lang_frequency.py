@@ -26,9 +26,7 @@ if __name__ == '__main__':
         words = get_words(text)
         most_frequent_words = get_most_frequent_words(words)
         print('num', 'word', 'count' )
-        for num, count_dict in enumerate(most_frequent_words, start=1):
-            word = count_dict[0]
-            count = count_dict[1]
+        for num, (word, count) in enumerate(most_frequent_words, start=1):
             print(num, ' ', word, ' ', count)
     except(IndexError, IOError):
         print('Bad path to file')
