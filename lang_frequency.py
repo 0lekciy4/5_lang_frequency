@@ -28,5 +28,8 @@ if __name__ == '__main__':
         print('num', 'word', 'count' )
         for num, (word, count) in enumerate(most_frequent_words, start=1):
             print(num, ' ', word, ' ', count)
-    except(IndexError, IOError):
-        print('Bad path to file')
+    except IndexError:
+        print('Undefined path to the file')
+    except FileNotFoundError:
+        print('File not found')
+
